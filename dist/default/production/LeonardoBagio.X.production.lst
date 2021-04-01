@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Wed Mar 31 21:42:29 2021
+                                                                                               Wed Mar 31 21:51:34 2021
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	16F877A
@@ -1511,15 +1511,15 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1496  16D6  01AD               	clrf	controleMaximoMinimo@valor+1
   1497  16D7                     l2386:
   1498                           
-  1499                           ;main.c: 103:     if (valor > 1000){
+  1499                           ;main.c: 103:     if (valor > 1023){
   1500  16D7  082D               	movf	controleMaximoMinimo@valor+1,w
   1501  16D8  3A80               	xorlw	128
   1502  16D9  00FF               	movwf	btemp+1
-  1503  16DA  3083               	movlw	131
+  1503  16DA  3084               	movlw	132
   1504  16DB  027F               	subwf	btemp+1,w
   1505  16DC  1D03               	skipz
   1506  16DD  2EE0               	goto	u3715
-  1507  16DE  30E9               	movlw	233
+  1507  16DE  3000               	movlw	0
   1508  16DF  022C               	subwf	controleMaximoMinimo@valor,w
   1509  16E0                     u3715:
   1510  16E0  1C03               	skipc
@@ -1530,8 +1530,8 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1515  16E4                     u3710:
   1516  16E4                     l2388:
   1517                           
-  1518                           ;main.c: 104:         valor = 1000;
-  1519  16E4  30E8               	movlw	232
+  1518                           ;main.c: 104:         valor = 1023;
+  1519  16E4  30FF               	movlw	255
   1520  16E5  1283               	bcf	3,5	;RP0=0, select bank0
   1521  16E6  1303               	bcf	3,6	;RP1=0, select bank0
   1522  16E7  00AC               	movwf	controleMaximoMinimo@valor
@@ -7355,7 +7355,7 @@ DATA                 0      0      80      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Wed Mar 31 21:42:29 2021
+Symbol Table                                                                                   Wed Mar 31 21:51:34 2021
 
                  ___fldiv@aexp 0055                   ___fldiv@bexp 0054                              pc 0002  
                  ___fldiv@sign 004D                             l70 08C6                             l47 0DCD  

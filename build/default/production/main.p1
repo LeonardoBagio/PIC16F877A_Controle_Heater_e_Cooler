@@ -478,12 +478,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 103 ]
 "103
-[; ;main.c: 103:     if (valor > 1000){
-[e $ ! > _valor -> 1000 `i 104  ]
+[; ;main.c: 103:     if (valor > 1023){
+[e $ ! > _valor -> 1023 `i 104  ]
 {
 "104
-[; ;main.c: 104:         valor = 1000;
-[e = _valor -> 1000 `i ]
+[; ;main.c: 104:         valor = 1023;
+[e = _valor -> 1023 `i ]
 "105
 [; ;main.c: 105:     }
 }

@@ -1965,8 +1965,8 @@ int controleMaximoMinimo(int valor){
         valor = 0;
     }
 
-    if (valor > 1000){
-        valor = 1000;
+    if (valor > 1023){
+        valor = 1023;
     }
 
     return valor;
