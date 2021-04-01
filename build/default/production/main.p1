@@ -503,36 +503,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _main ]
 [f ]
-"112
-[; ;main.c: 112:     TRISA = 0xFF;
+"111
+[; ;main.c: 111:     TRISA = 0xFF;
 [e = _TRISA -> -> 255 `i `uc ]
-"113
-[; ;main.c: 113:     TRISB = 0x0F;
+"112
+[; ;main.c: 112:     TRISB = 0x0F;
 [e = _TRISB -> -> 15 `i `uc ]
-"114
-[; ;main.c: 114:     TRISC = 0x00;
+"113
+[; ;main.c: 113:     TRISC = 0x00;
 [e = _TRISC -> -> 0 `i `uc ]
-"115
-[; ;main.c: 115:     TRISD = 0x00;
+"114
+[; ;main.c: 114:     TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]
-"116
-[; ;main.c: 116:     TRISE = 0x00;
+"115
+[; ;main.c: 115:     TRISE = 0x00;
 [e = _TRISE -> -> 0 `i `uc ]
-"117
-[; ;main.c: 117:     static int temperatura;
+"116
+[; ;main.c: 116:     static int temperatura;
 [v F1026 `i ~T0 @X0 1 s temperatura ]
+"117
+[; ;main.c: 117:     static int cooler;
+[v F1027 `i ~T0 @X0 1 s cooler ]
 "118
-[; ;main.c: 118:     unsigned int setPoint = 4400;
+[; ;main.c: 118:     unsigned int setPoint = 4150;
 [v _setPoint `ui ~T0 @X0 1 a ]
-[e = _setPoint -> -> 4400 `i `ui ]
+[e = _setPoint -> -> 4150 `i `ui ]
 "119
 [; ;main.c: 119:     float valorSetPoint = 0;
 [v _valorSetPoint `f ~T0 @X0 1 a ]
 [e = _valorSetPoint -> -> 0 `i `f ]
 "120
-[; ;main.c: 120:     int cooler = 10;
-[v _cooler `i ~T0 @X0 1 a ]
-[e = _cooler -> 10 `i ]
+[; ;main.c: 120:     float valorHeater = 0;
+[v _valorHeater `f ~T0 @X0 1 a ]
+[e = _valorHeater -> -> 0 `i `f ]
 "122
 [; ;main.c: 122:     ADC_Init();
 [e ( _ADC_Init ..  ]
@@ -553,50 +556,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 128:         temperatura = (ADC_Read(0)*10/8 - 150);
 [e = F1026 -> - / * ( _ADC_Read (1 -> -> 0 `i `uc -> -> 10 `i `ui -> -> 8 `i `ui -> -> 150 `i `ui `i ]
 "129
-[; ;main.c: 129:         valorSetPoint = (setPoint / 10);
+[; ;main.c: 129:         cooler = (unsigned int)ADC_Read(1);
+[e = F1027 -> ( _ADC_Read (1 -> -> 1 `i `uc `i ]
+"130
+[; ;main.c: 130:         valorSetPoint = (setPoint / 10);
 [e = _valorSetPoint -> / _setPoint -> -> 10 `i `ui `f ]
-"131
-[; ;main.c: 131:         if (valorSetPoint <= temperatura){
-[e $ ! <= _valorSetPoint -> F1026 `f 109  ]
-{
 "132
-[; ;main.c: 132:             cooler += 3;
-[e =+ _cooler -> 3 `i ]
+[; ;main.c: 132:         if (temperatura <= valorSetPoint){
+[e $ ! <= -> F1026 `f _valorSetPoint 109  ]
+{
 "133
-[; ;main.c: 133:         } else {
+[; ;main.c: 133:             valorHeater += 10;
+[e =+ _valorHeater -> -> 10 `i `f ]
+"134
+[; ;main.c: 134:         } else {
 }
 [e $U 110  ]
 [e :U 109 ]
 {
-"134
-[; ;main.c: 134:             cooler -= 7;
-[e =- _cooler -> 7 `i ]
 "135
-[; ;main.c: 135:         }
+[; ;main.c: 135:             valorHeater -= 10;
+[e =- _valorHeater -> -> 10 `i `f ]
+"136
+[; ;main.c: 136:         }
 }
 [e :U 110 ]
-"137
-[; ;main.c: 137:         cooler = controleMaximoMinimo(cooler);
-[e = _cooler ( _controleMaximoMinimo (1 _cooler ]
+"138
+[; ;main.c: 138:         cooler = controleMaximoMinimo(cooler);
+[e = F1027 ( _controleMaximoMinimo (1 F1027 ]
 "139
-[; ;main.c: 139:         PWM1_Duty(temperatura, 4000);
-[e ( _PWM1_Duty (2 , -> F1026 `ui -> -> 4000 `i `ui ]
+[; ;main.c: 139:         temperatura = controleMaximoMinimo(temperatura);
+[e = F1026 ( _controleMaximoMinimo (1 F1026 ]
 "140
-[; ;main.c: 140:         PWM2_Duty(cooler, 4000);
-[e ( _PWM2_Duty (2 , -> _cooler `ui -> -> 4000 `i `ui ]
-"141
-[; ;main.c: 141:         atualizaDisplay(setPoint);
-[e ( _atualizaDisplay (1 _setPoint ]
+[; ;main.c: 140:         valorHeater = controleMaximoMinimo(valorHeater);
+[e = _valorHeater -> ( _controleMaximoMinimo (1 -> _valorHeater `i `f ]
 "142
-[; ;main.c: 142:     }
+[; ;main.c: 142:         PWM1_Duty(valorHeater, 4000);
+[e ( _PWM1_Duty (2 , -> _valorHeater `ui -> -> 4000 `i `ui ]
+"143
+[; ;main.c: 143:         PWM2_Duty(cooler, 4000);
+[e ( _PWM2_Duty (2 , -> F1027 `ui -> -> 4000 `i `ui ]
+"144
+[; ;main.c: 144:         atualizaDisplay(setPoint);
+[e ( _atualizaDisplay (1 _setPoint ]
+"145
+[; ;main.c: 145:     }
 }
 [e :U 106 ]
 [e $U 107  ]
 [e :U 108 ]
-"144
-[; ;main.c: 144:     return;
+"147
+[; ;main.c: 147:     return;
 [e $UE 105  ]
-"145
-[; ;main.c: 145: }
+"148
+[; ;main.c: 148: }
 [e :UE 105 ]
 }

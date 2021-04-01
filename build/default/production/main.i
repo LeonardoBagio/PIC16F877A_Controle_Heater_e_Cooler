@@ -1973,16 +1973,16 @@ int controleMaximoMinimo(int valor){
 }
 
 void main(void) {
-
     TRISA = 0xFF;
     TRISB = 0x0F;
     TRISC = 0x00;
     TRISD = 0x00;
     TRISE = 0x00;
     static int temperatura;
-    unsigned int setPoint = 4400;
+    static int cooler;
+    unsigned int setPoint = 4150;
     float valorSetPoint = 0;
-    int cooler = 10;
+    float valorHeater = 0;
 
     ADC_Init();
     PWM1_Start();
@@ -1991,17 +1991,20 @@ void main(void) {
     while(1){
         setPoint = controlarSetPoint(setPoint);
         temperatura = (ADC_Read(0)*10/8 - 150);
+        cooler = (unsigned int)ADC_Read(1);
         valorSetPoint = (setPoint / 10);
 
-        if (valorSetPoint <= temperatura){
-            cooler += 3;
+        if (temperatura <= valorSetPoint){
+            valorHeater += 10;
         } else {
-            cooler -= 7;
+            valorHeater -= 10;
         }
 
         cooler = controleMaximoMinimo(cooler);
+        temperatura = controleMaximoMinimo(temperatura);
+        valorHeater = controleMaximoMinimo(valorHeater);
 
-        PWM1_Duty(temperatura, 4000);
+        PWM1_Duty(valorHeater, 4000);
         PWM2_Duty(cooler, 4000);
         atualizaDisplay(setPoint);
     }
