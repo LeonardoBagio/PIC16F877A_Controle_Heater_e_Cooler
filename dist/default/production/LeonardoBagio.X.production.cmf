@@ -43,7 +43,7 @@ cstackBANK1 BANK1 1 A0 A0 16 1
 bssBANK1 BANK1 1 B6 B6 8 1
 strings STRING 0 3 3 10 2
 config CONFIG 4 2007 2007 1 2
-$C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
+$C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 1 2
 # %UNUSED Section
@@ -94,21 +94,21 @@ STRING 1800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LeonardoBagio.X.production.o
-7F2 cinit CODE >746:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F2 cinit CODE >749:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F2 cinit CODE >781:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F3 cinit CODE >782:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F4 cinit CODE >783:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F5 cinit CODE >784:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F6 cinit CODE >785:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F7 cinit CODE >786:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F8 cinit CODE >787:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7F9 cinit CODE >788:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7FA cinit CODE >789:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7FB cinit CODE >790:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7FC cinit CODE >796:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7FC cinit CODE >798:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
-7FD cinit CODE >799:C:\Users\leoba\AppData\Local\Temp\xcAsc7c.s
+7F2 cinit CODE >746:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F2 cinit CODE >749:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F2 cinit CODE >781:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F3 cinit CODE >782:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F4 cinit CODE >783:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F5 cinit CODE >784:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F6 cinit CODE >785:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F7 cinit CODE >786:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F8 cinit CODE >787:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7F9 cinit CODE >788:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7FA cinit CODE >789:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7FB cinit CODE >790:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7FC cinit CODE >796:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7FC cinit CODE >798:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
+7FD cinit CODE >799:C:\Users\leoba\AppData\Local\Temp\xcAsd44.s
 16C6 text22 CODE >11:C:/Users/leoba/Downloads/biblioteca/adc.c
 16C6 text22 CODE >13:C:/Users/leoba/Downloads/biblioteca/adc.c
 16CA text22 CODE >14:C:/Users/leoba/Downloads/biblioteca/adc.c
@@ -994,10 +994,10 @@ _PWM1_Duty 1680 0 CODE 0 text13 dist/default/production\LeonardoBagio.X.producti
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _PWM2_Duty 1810 0 CODE 0 text11 dist/default/production\LeonardoBagio.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
+___sp 0 0 STACK 2 stack C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
 _main 1B9C 0 CODE 0 maintext dist/default/production\LeonardoBagio.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
-start 0 0 CODE 0 init C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
+start 0 0 CODE 0 init C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
 ___flmul@aexp 68 0 BANK0 1 cstackBANK0 dist/default/production\LeonardoBagio.X.production.o
 ___flmul@bexp 69 0 BANK0 1 cstackBANK0 dist/default/production\LeonardoBagio.X.production.o
 ___flmul@prod 6A 0 BANK0 1 cstackBANK0 dist/default/production\LeonardoBagio.X.production.o
@@ -1021,12 +1021,12 @@ _controleMaximoMinimo 2D9E 0 CODE 0 text1 dist/default/production\LeonardoBagio.
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_ADC_Init 0 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
 __size_of_ADC_Read 0 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
 ___aldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\LeonardoBagio.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -1075,8 +1075,8 @@ __end_of_digito 26 0 STRING 0 strings dist/default/production\LeonardoBagio.X.pr
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\LeonardoBagio.X.production.o
 __end_of_ADC_Init 2D9E 0 CODE 0 text22 dist/default/production\LeonardoBagio.X.production.o
 __end_of_ADC_Read 2F1E 0 CODE 0 text21 dist/default/production\LeonardoBagio.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
-___stacklo 0 0 ABS 0 - C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
+___stackhi 0 0 ABS 0 - C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
+___stacklo 0 0 ABS 0 - C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
 ___lwdiv@quotient 7B 0 COMMON 1 cstackCOMMON dist/default/production\LeonardoBagio.X.production.o
 ___fladd@a 74 0 COMMON 1 cstackCOMMON dist/default/production\LeonardoBagio.X.production.o
 ___fladd@b 70 0 COMMON 1 cstackCOMMON dist/default/production\LeonardoBagio.X.production.o
@@ -1099,7 +1099,7 @@ _TRISC2 43A 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
 __end_of_PWM2_Start 1024 0 CODE 0 text10 dist/default/production\LeonardoBagio.X.production.o
 __size_of_atualizaDisplay 0 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
 __size_of_PWM1_Start 0 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
+___int_sp 0 0 STACK 2 stack C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -1167,7 +1167,7 @@ ___xxtofl 1508 0 CODE 0 text14 dist/default/production\LeonardoBagio.X.productio
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\LeonardoBagio.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\leoba\AppData\Local\Temp\xcAsc7c.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\leoba\AppData\Local\Temp\xcAsd44.o
 atualizaDisplay@milhar 24 0 BANK0 1 cstackBANK0 dist/default/production\LeonardoBagio.X.production.o
 __end_of___xxtofl 1680 0 CODE 0 text14 dist/default/production\LeonardoBagio.X.production.o
 __size_of___flge 0 0 ABS 0 - dist/default/production\LeonardoBagio.X.production.o
